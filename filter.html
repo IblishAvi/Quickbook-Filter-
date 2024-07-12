@@ -4,86 +4,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search and Filters</title>
+  <title>Search and Filters </title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="container">
+  <div id="wrapper">
 
-    <aside>
-       <div class="heading"> <span class="material-symbols-outlined">filter_alt </span>
-        <h2>Filters:</h2>
-      </div>
+    <aside id="sidebar">
+    <div class="container">
+        <div class="heading">
+          <span class="material-symbols-outlined">filter_alt </span>
+          <h1>Filters:</h1>
+        </div>
+        <div class="filters">
 
-      <!--<input type="text" id="searchInput" placeholder="Search...">
-      <button onclick="handleSearch()">Search</button> -->
-      
-      <div class="filters">
-
-        <label for="dateFilter">Date:</label>
-        <input type="date" id="dateFilter">
-        <label for="locationFilter">Location:</label>
-        <!-- <input type="locationFilter" name="turf location"> -->
-        <select id="locationFilter">
-          <option value="Mumbai">Mumbai</option>
-          <option value="Delhi">Delhi</option>
-          <option value="Kolkatta">Kolkatta</option>
-          <option value="Gurgaon">Gurgaon</option>
-          <option value="Banglore">Banglore</option>
-          <option value="Hyderabad">Hyderabad</option>
-          <option value="Chennai">Chennai</option>
-          <option value="Noida">Noida</option>
-          <option value="Gandhinagar">Gandhinagar</option>
-          <option value="Pune">Pune</option>
-          <option value="Jaipur">Jaipur</option>
-          <option value="Patna">Patna</option>
-          <option value="Lucknow">Lucknow</option>
-          <option value="Chandigarh">Chandigarh</option>
-          <option value="Dehradun">Dehradun</option>
-          <option value="Masoorie">Masoorie</option>
-          <option value="Nainital">Nainital</option>
-         
-
-        </select>
-
-      </div>
+          <label for="dateFilter">Date:</label>
+          <input type="date" id="dateFilter">
+          <label for="locationFilter">Location:</label>
+          <!-- <input type="locationFilter" name="turf location"> -->
+          <select id="locationFilter">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkatta">Kolkatta</option>
+            <option value="Gurgaon">Gurgaon</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Noida">Noida</option>
+            <option value="Gandhinagar">Gandhinagar</option>
+            <option value="Pune">Pune</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Patna">Patna</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Dehradun">Dehradun</option>
+            <option value="Masoorie">Masoorie</option>
+            <option value="Nainital">Nainital</option>
+            <option value="Ludhiana">Ludhiana</option>
+            <option value="Gauhati">Gauhati</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="kochin">Kochin</option>
+            <option value="Manglore">Manglore</option>
+            <option value="Dharamashala">Dharamashala</option>
+            <option value="Nainital">Bhopal</option>
 
 
-         <section class="filter-section">
-          
-         <h3>Price Range</h3>
-          <input type="range" id="priceRange" name="priceRange" min="0" max="1000" value="500"></section>
+          </select>
+
+        </div>
+        <div id="btn">
+          <h4>Book Your slot</h4>
+          <button>5:45 AM - 09:30 AM</button>
+          <button>9:45 AM - 01:30 PM</button>
+          <button>2:30 PM - 06:15 PM</button>
+          <button>6:30 PM - 10:15 PM</button>
+
+        </div>
+        
+
+        <section class="filter-section">
+
+          <h3>Price Range</h3>
+          <!-- <input type="range" id="priceRange" name="priceRange" min="0" max="1000" value="500"> -->
           <div class="price-input">
-            <!-- <div class="field">
+            <div class="field">
               <span>Min</span>
               <input type="number" class="input-min" value="1000">
             </div>
             <div class="seperator">-</div>
             <div class="field">
               <span>Max</span>
-              <input type="number" class="input-max" value="10000">
-            </div> -->
+              <input type="number" class="input" value="10000">
+            </div>
           </div>
-           
+        </section>
         
+        <button type="submit-btn" id="submit-btn" applyFilters()">Apply Filters</button>
 
-
-        <button onclick="applyFilters()">Apply Filters</button>
+      <div id="results">
+        <!-- Results will be dynamically populated here -->
       </div>
 
-       <div id="results">
-          <!-- Results will be dynamically populated here -->
-        </div>
+    </div>
+
     </aside>
-  </div>
    <main>
     <div class="main">
       <form action="">
         <span class="material-symbols-outlined">search</span>
-        <input type="text" id="search-Input " placeholder="Search product" onkeyup="search()">
+        <input type="text" id="searchInput " placeholder="Search product" onkeyup="search()">
+        <button type="submit" id="submit">Search</button>
       </form>
       <div class="product-list">
         <div class="product">
@@ -175,7 +189,7 @@
           <img src="./image/Banglore2.jpg" alt="">    
             <div class="prod-detail">
               <div style="display: flex;"><span class="material-symbols-outlined">location_on</span><h2>Banglore</h2></div>
-              <h3>$90</h3>
+              <h3>$85</h3>
           </div>
         </div>
         <div class="product">
@@ -272,12 +286,30 @@
 
 
       </div>
-    </div>
-  </main>
+      </div>
+  
+    </main>
 
+  </div>
 
+  <script>
+    function search() {
+      let input = document.getElementById('searchInput');
+      let filter = input.value.toUpperCase();
+      let products = document.querySelectorAll('.product');
 
-  <script src="./filter.js"></script>
+      products.forEach(product => {
+        let name = product.querySelector('h2').textContent.toUpperCase();
+
+        if (name.includes(filter)) {
+          product.style.display = "";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+
+  </script>
 </body>
 
 </html>
