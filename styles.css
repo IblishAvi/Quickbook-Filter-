@@ -303,13 +303,7 @@ button:hover {
 }
 
    
-/* .seperator{
-    margin:0 auto;
-    padding-top: 18px;
-    padding-right: 10px;
-    font-weight: 900;
-    font-weight: bold;
-} */
+
 #submit-btn{
     /* align-self: center; */
     margin-top:10px;
@@ -319,20 +313,13 @@ button:hover {
 
 
 
-/* .booking {
-    background-color: #ccc; 
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-  }
-   */
+
 .booking.active {
     background-color: white; /* Change to your desired active color */
     color: rgb(14, 154, 53); /* Text color for active state */
   }
   
-/* @media (max-width:20%) {
+ @media (max-width:498) {
    #wrapper{
     display: flex;
     flex-direction: col;
@@ -350,10 +337,8 @@ button:hover {
     flex-direction: column;
   }
 
-  .product {
-    flex: 1 1 100%;
-  }
-} */
+
+} 
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
